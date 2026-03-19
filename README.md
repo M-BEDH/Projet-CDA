@@ -1,5 +1,4 @@
-# Projet-CDA
-# Projet ASV — Application de Suivi Vétérinaire
+# ASV — Application de Suivi Vétérinaire - Projet-CDA
 
 Application de gestion multi-établissements pour cliniques vétérinaires, refuges et associations.
 Développée dans le cadre du titre professionnel **Concepteur Développeur d'Applications (RNCP36490)**.
@@ -8,8 +7,8 @@ Développée dans le cadre du titre professionnel **Concepteur Développeur d'Ap
 
 | Composant | Technologie | Repo |
 |---|---|---|
-| API REST | Symfony 7 / PHP 8.3 | [ASV-backend](https://github.com/M-BEDH/ASV-backend) (privé au moment de ce repo - version public à venir ) |
-| Application web/mobile | Expo / React Native | [ASV-frontend](https://github.com/M-BEDH/ASV-frontend) (privé au moment de ce repo - version public à venir ) |
+| API REST | Symfony 7 / PHP 8.2 | [ASV-backend](https://github.com/M-BEDH/ASV-backend) (privé au moment de ce repo - version public à venir) |
+| Application web/mobile | Expo / React Native | [ASV-frontend](https://github.com/M-BEDH/ASV-frontend) (privé au moment de ce repo - version public à venir) |
 | Infra | Docker Compose + Nginx | ce repo |
 
 ## Services Docker
@@ -22,16 +21,28 @@ Développée dans le cadre du titre professionnel **Concepteur Développeur d'Ap
 | Prometheus | http://localhost:9090 |
 | Mailpit (mails dev) | http://localhost:8025 |
 
+## Prérequis
+
+Créer le fichier `monitoring/mysqld-exporter/.my.cnf` (non commité) :
+
+```ini
+[client]
+user=MYSQL_USER
+password=MYSQL_PASSWORD
+host=mysql
+port=3306
+```
+
 ## Lancer le projet
 
-\`\`\` bash
+```bash
 cp .env.example .env  # renseigner les variables puis à la racine du projet :
 docker compose up -d
-\`\`\`
+```
 
 ## Documents
 
-Le dossier \`docs/\` contient les livrables du projet :  ( A venir )
+Le dossier `docs/` contient les livrables du projet : (à venir)
 - Cahier des charges
 - Diagrammes UML
 - Plan de tests

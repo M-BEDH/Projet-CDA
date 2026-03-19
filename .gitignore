@@ -3,6 +3,12 @@
 .env.local
 .env.*.local
 
+monitoring/mysqld-exporter/.my.cnf
+
+
 # sous-repos indépendants
 backend/
 mobile-web/
+
+# Memo personnel
+Memo/
